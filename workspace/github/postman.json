@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "cb2f034b-5280-4e99-9be0-3a6c756b7072",
+		"name": "GitHub",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9633703"
+	},
+	"item": [
+		{
+			"name": "ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.github.com/octocat",
+					"protocol": "http",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"octocat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get PullRequest",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
