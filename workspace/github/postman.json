@@ -12,12 +12,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://api.github.com/octocat",
-					"protocol": "http",
+					"raw": "{{base_url}}/octocat",
 					"host": [
-						"api",
-						"github",
-						"com"
+						"{{base_url}}"
 					],
 					"path": [
 						"octocat"
@@ -30,9 +27,62 @@
 			"name": "Get PullRequest",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [
+					{
+						"key": "X-GitHub-Api-Version",
+						"value": "2022-11-28",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/repos/laravel/laravel/pulls?state=all",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"repos",
+						"laravel",
+						"laravel",
+						"pulls"
+					],
+					"query": [
+						{
+							"key": "state",
+							"value": "all"
+						}
+					]
+				}
 			},
 			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://api.github.com",
+			"type": "string"
 		}
 	]
 }
