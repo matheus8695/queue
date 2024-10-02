@@ -18,5 +18,6 @@ class PullRequest extends Model
         'api_updated_at',
         'api_merged_at',
         'api_closed_at',
+        'commits_total',
     ];
 }

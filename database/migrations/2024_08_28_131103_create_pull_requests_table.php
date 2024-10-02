@@ -13,6 +13,7 @@ return new class () extends Migration {
             $table->string('api_number');
             $table->string('api_state');
             $table->string('api_title');
+            $table->integer('commits_total');
             $table->dateTime('api_created_at');
             $table->dateTime('api_updated_at');
             $table->dateTime('api_merged_at')->nullable();
