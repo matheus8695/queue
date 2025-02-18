@@ -16,6 +16,8 @@ class Client
         ])->withHeaders([
             'Accept' => 'application/vnd.github+json',
             'X-GitHub-Api-Version' => '2022-11-28',
-        ])->withToken(config('services.github.personal_access_token'));
+        ])->withToken(
+            config('services.github.personal_access_token')
+        );
     }
 }

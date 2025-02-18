@@ -13,4 +13,9 @@ class PullRequestReviewersRequestedSync implements ShouldQueue
     {
         
     }
+
+    public function handle()
+    {
+        
+    }
 }
